@@ -1,27 +1,17 @@
 <app-slider></app-slider>
 <!--================Creative Feature Area =================-->
 <section class="creative_feature_area">
-  <div class="container">
+  <div class="container" >
       <div class="c_feature_box">
           <div class="row">
-              <div class="col-lg-4">
+              <div class="col-lg-4" *ngFor="let featured of dataPaginaService.featureds">
                   <div class="c_box_item">
-                      <a href="#"><h4><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> titulo</h4></a>
-                      <p>contenido. </p>
+                      <a href="#"><h4><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{featured.titulo}}</h4></a>
+                      <p>{{featured.contenido}} </p>
                   </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="c_box_item">
-                      <a href="#"><h4><i class="fa fa-clock-o" aria-hidden="true"></i> Expertise</h4></a>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="c_box_item">
-                      <a href="#"><h4><i class="fa fa-diamond" aria-hidden="true"></i> Quality</h4></a>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                  </div>
-              </div>
+              
+             
           </div>
       </div>
       <div class="digital_feature p_100">
@@ -29,16 +19,16 @@
               <div class="col-lg-6">
                   <div class="d_feature_text">
                       <div class="main_title">
-                          <h2>We Are A Creative <br /> Digital Agency Focused on Growing Brands Online</h2>
+                          <h2>Somos una Agencia De desarrollo   <br /> y Diseño enfocados hacer crecer tus ideas </h2>
                       </div>
-                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
-                      <a class="read_btn" href="#">Read more</a>
+                      <p>Con un equipo de amplia experiencia joven con ganas de llevar a feliz termino cada desarrollo cada proyecto.</p>
+                      <p>Hacemos realidad tu idea Desarrolla con nosotros tu proyecto y vive una experiencia unica en atencion .</p>
+                      <a class="read_btn" href="#">Quieres saber mas </a>
                   </div>
               </div>
               <div class="col-lg-6">
                   <div class="d_feature_img">
-                      <img src="img/feature-right.jpg" alt="">
+                      <img src="./assets/img/feature-right.jpg" alt="">
                   </div>
               </div>
           </div>
@@ -49,32 +39,20 @@
 <!--================Our Service Area =================-->
 <section class="service_area">
   <div class="container">
-      <div class="center_title">
-          <h2>titulo</h2>
-          <p>contenido</p>
+      <div class="center_title" >
+          <h2>Servicios</h2>
+          <p>Conoce mas de Nuestros Servicios</p>
       </div>
       <div class="row service_item_inner">
-          <div class="col-lg-4">
+          <div class="col-lg-4" *ngFor="let service of dataPaginaService.services">
               <div class="service_item">
-                  <i class="ti-ruler-pencil"></i>
-                  <h4>titulo</h4>
-                  <p>contenido.</p>
+                  <i class={{service.class}}></i>
+                  <h4>{{service.titulo}}</h4>
+                  <p>{{service.contenido}}.</p>
               </div>
           </div>
-          <div class="col-lg-4">
-              <div class="service_item">
-                  <i class="ti-desktop"></i>
-                  <h4>Website Development</h4>
-                  <p>The Fancy that recognize the talent and effort of the best web designers, developers and agencies in the world.</p>
-              </div>
-          </div>
-          <div class="col-lg-4">
-              <div class="service_item">
-                  <i class="ti-announcement"></i>
-                  <h4>Digital Marketing</h4>
-                  <p>The Fancy that recognize the talent and effort of the best web designers, developers and agencies in the world.</p>
-              </div>
-          </div>
+          
+          
       </div>
   </div>
 </section>
@@ -84,7 +62,7 @@
 <section class="industries_area">
   <div class="left_indus">
       <div class="indus_img">
-          <img src="img/indus-laptop.png" alt="">
+          <img src="assets/img/indus-laptop.png" alt="">
       </div>
   </div>
   <div class="right_indus">

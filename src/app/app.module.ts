@@ -15,6 +15,12 @@ import { FreeComponent } from './pages/free/free.component';
 import { InformationComponent } from './pages/information/information.component';
 import { SliderComponent } from './pages/slider/slider.component';
 
+//servicios
+import {DataPaginaService} from './services/data-pagina.service';
+
+//modulo
+import {HttpClientModule} from '@angular/common/http';
+import { UneteComponent } from './pages/unete/unete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +34,15 @@ import { SliderComponent } from './pages/slider/slider.component';
     FooterComponent,
     FreeComponent,
     InformationComponent,
-    SliderComponent
+    SliderComponent,
+    UneteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ DataPaginaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
