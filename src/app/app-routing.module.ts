@@ -20,7 +20,7 @@ const routes: Routes =[
 {path: 'register', component: RegisterComponent},
 {path: 'free', component: FreeComponent},
 {path: 'contacto', component: ContactComponent},
-{path: 'unete', component: UneteComponent}
+{path: 'unete', component: UneteComponent},
 {path: '**', component: NoFoundPagesComponent}
 ];
 @NgModule({

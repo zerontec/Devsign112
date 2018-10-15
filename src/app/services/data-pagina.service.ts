@@ -37,7 +37,7 @@ export class DataPaginaService {
    }
 
 private cargarFeatureds() {
-this.http.get('assets/data/featured.json')
+this.http.get('https://devsign-3a79e.firebaseio.com/featureds.json')
 .subscribe((resp: Featured[] ) => {
 
   this.featureds = resp;
@@ -46,7 +46,7 @@ this.http.get('assets/data/featured.json')
 }
 
 private cargarServicios(){
-this.http.get('assets/data/servicios.json')
+this.http.get('https://devsign-3a79e.firebaseio.com/servicios.json')
 .subscribe((resp: Services[]) => {
 
   this.services = resp;

@@ -13,14 +13,18 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { FreeComponent } from './pages/free/free.component';
 import { InformationComponent } from './pages/information/information.component';
+import {UneteComponent} from './pages/unete/unete.component';
 import { SliderComponent } from './pages/slider/slider.component';
+import { environment } from '../environments/environment';
 
 //servicios
 import {DataPaginaService} from './services/data-pagina.service';
 
 //modulo
 import {HttpClientModule} from '@angular/common/http';
-import { UneteComponent } from './pages/unete/unete.component';
+import {AngularFireModule} from '@angular/fire';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +44,8 @@ import { UneteComponent } from './pages/unete/unete.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [ DataPaginaService],
   bootstrap: [AppComponent]
