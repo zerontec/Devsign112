@@ -4,12 +4,7 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: { apiKey: 'AIzaSyBUqPjmNMPFwvpZ5yaWEpYT3Li4O_0s9Lk',
-    authDomain: 'devsign-3a79e.firebaseapp.com',
-    databaseURL: 'https://devsign-3a79e.firebaseio.com',
-    projectId: 'devsign-3a79e',
-    storageBucket: 'devsign-3a79e.appspot.com',
-    messagingSenderId: '358268003603'
+
 }
 };
 
