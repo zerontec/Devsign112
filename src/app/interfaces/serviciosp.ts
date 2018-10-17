@@ -1,9 +1,9 @@
 export interface ServiciosP {
 
     contenido?: string;
-     tituloc?: string;
+     titulo?: string;
      url?:string;
-
-
-
+    
 }
+
+//info de pagina princiapal de servicio

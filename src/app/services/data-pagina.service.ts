@@ -4,6 +4,7 @@ import {InfoPagina} from '../interfaces/data-pagina';
 import {Featured} from '../interfaces/featured';
 import { Services } from '@angular/core/src/view';
 import {ServiciosP} from '../interfaces/serviciosp';
+import {InfoServicio} from '../interfaces/info-servicio';
 
 
 @Injectable({
@@ -16,6 +17,8 @@ export class DataPaginaService {
   featureds: Featured [] = [];
   services: Services [] = [];
   servicios: ServiciosP [] = [];
+  infoServicio: InfoServicio = {};
+ 
 
 
   constructor( private http: HttpClient) {
@@ -24,6 +27,7 @@ export class DataPaginaService {
     this.cargarFeatureds();
     this.cargarServicios();
     this.cargarServicioP();
+    this.cargarInfoServicio();
 
    }
 
@@ -58,13 +62,24 @@ this.http.get('https://devsign-3a79e.firebaseio.com/servicios.json')
 
 }
 
-private cargarServicioP(){
-  this.http.get('assets/data/serviciop.json')
-  .subscribe((resp: ServiciosP[]) => {
+private cargarServicioP() {
+  this.http.get('https://devsign-3a79e.firebaseio.com/serviciop.json')
+  .subscribe((resp: ServiciosP []) => {
 
     this.servicios = resp;
     console.log(resp);
   });
 }
+
+private cargarInfoServicio(){
+
+  this.http.get('https://devsign-3a79e.firebaseio.com/infoservicio.json')
+  .subscribe((resp: InfoServicio) => {
+
+    this.infoServicio = resp;
+  });
+
+}
+
 
 }

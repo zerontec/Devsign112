@@ -3,4 +3,4 @@ export interface InfoPagina {
     contenido?: string;
     class?: string;
   }
-
+//interfaces informacion servicio del home
